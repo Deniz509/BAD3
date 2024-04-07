@@ -3,8 +3,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FoodAPI.Data.Models
 {
-    public class Packets
-    {
+    public class Dispatch
+	{
         [Key]
         public int TrackId{ get; set; }
 
