@@ -1,25 +1,11 @@
-<<<<<<< HEAD
 {
-  "profiles": {
-    "FoodAPI": {
-      "commandName": "Project",
-      "launchBrowser": true,
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "applicationUrl": "https://localhost:63890;http://localhost:63891"
-    }
-  }
-}
-=======
-﻿{
   "$schema": "http://json.schemastore.org/launchsettings.json",
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:12329",
-      "sslPort": 44314
+      "applicationUrl": "http://localhost:6759/",
+      "sslPort": 44397
     }
   },
   "profiles": {
@@ -27,8 +13,8 @@
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
-      "launchUrl": "swagger",
-      "applicationUrl": "http://localhost:5230",
+      "launchUrl": "swagger/",
+      "applicationUrl": "http://localhost:5281/",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -37,8 +23,8 @@
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
-      "launchUrl": "swagger",
-      "applicationUrl": "https://localhost:7202;http://localhost:5230",
+      "launchUrl": "swagger/",
+      "applicationUrl": "https://localhost:7247;http://localhost:5281",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -46,11 +32,9 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "swagger",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     }
   }
 }
->>>>>>> 53c83ba86f8af05b6739b231a3613cbbb7beb3c2

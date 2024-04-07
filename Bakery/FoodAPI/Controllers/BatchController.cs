@@ -36,43 +36,43 @@ namespace FoodAPI.Controllers
                 select new
                 {
                     bakingGoodsId = bakingGoods.BakingGoodsID,
-                    recipeId = bakingGoods.RecipeID
+                    recipeID = bakingGoods.RecipeID
                 };
 
             var third =
                 from recipe in _context.Recipe
                 join bg in second
-                on recipe.RecipeID equals bg.recipeId
+                on recipe.RecipeID equals bg.recipeID
                 select new
                 {
-                    recipeId = recipe.RecipeID
+                    recipeID = recipe.RecipeID
                 };
             var fourth =
                 from ingredient in _context.IngredientsInRecipes
                 join re in third
-                on ingredient.RecipeID equals re.recipeId
+                on ingredient.RecipeID equals re.recipeID
                 select new
                 {
-                    stockId = ingredient.StockID,
+                    stockID = ingredient.StockID,
                     Quantity = ingredient.Quantity
                 };
             var fifth =
                 from stock in _context.Stock
                 join ing in fourth
-                on stock.StockID equals ing.stockId
+                on stock.StockID equals ing.stockID
                 select new
                 {
                     ingredientName = stock.Name,
-                    stockId = ing.stockId,
+                    stockID = ing.stockID,
                     Quantity = ing.Quantity
                 };
             var res =
                 from allergen in _context.Allergen
                 join stk in fifth
-                on allergen.StockID equals stk.stockId
+                on allergen.StockID equals stk.stockID
                 select new
                 {
-                    ingredientName = stk.ingredientName,
+                    Name = stk.ingredientName,
                     Quantity = stk.Quantity,
                     allergens = allergen
                 };
