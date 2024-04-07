@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+{
+  "profiles": {
+    "FoodAPI": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:63890;http://localhost:63891"
+    }
+  }
+}
+=======
 ﻿{
   "$schema": "http://json.schemastore.org/launchsettings.json",
   "iisSettings": {
@@ -39,3 +53,4 @@
     }
   }
 }
+>>>>>>> 53c83ba86f8af05b6739b231a3613cbbb7beb3c2
