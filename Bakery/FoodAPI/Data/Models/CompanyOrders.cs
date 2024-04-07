@@ -3,10 +3,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace FoodAPI.Data.Models
 {
-    public class Orders
+    public class CompanyOrders
     {
         [Key]
-        public int OrdersId { get; set; }
+        public int CompanyOrdersID { get; set; }
 
         public string DeliveryDate { get; set; }
 

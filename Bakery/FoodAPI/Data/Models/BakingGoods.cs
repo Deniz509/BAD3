@@ -9,19 +9,19 @@ namespace FoodAPI.Data.Models
     public class BakingGoods
     {
         [Key]
-        public int BakingGoodsId { get; set; }
+        public int BakingGoodsID { get; set; }
 
-        public string BakingGoodsName { get; set; }
+        public string Name { get; set; }
 
-        public int Amount { get; set; }
+        public int Quantity { get; set; }
 
-        public Orders Orders { get; set; } = null!;
+        public CompanyOrders CompanyOrders { get; set; } = null!;
 
-        public int OrdersId { get; set; }
+        public int CompanyOrdersID { get; set; }
 
         public Recipe Recipe { get; set; } = null!;
 
-        public int RecipeId { get; set; }
+        public int RecipeID { get; set; }
 
         public ICollection<Batch> Batch { get; } = new List<Batch>(); 
 

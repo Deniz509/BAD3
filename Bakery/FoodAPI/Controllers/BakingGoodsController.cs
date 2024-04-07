@@ -21,7 +21,7 @@ namespace FoodAPI.Controllers
         [HttpGet("GetBakingGoodsInOrder3/{orderId}")]
         public ActionResult GetBakingGoodsInOrder(int orderId)
         {
-            var bakingGoods = _context.BakingGoods.Where(bg => bg.OrdersId == orderId).ToList();
+            var bakingGoods = _context.BakingGoods.Where(bg => bg.CompanyOrdersID == orderId).ToList();
 
             if (bakingGoods == null)
             {

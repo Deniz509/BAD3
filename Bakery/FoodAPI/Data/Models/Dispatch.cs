@@ -6,11 +6,11 @@ namespace FoodAPI.Data.Models
     public class Dispatch
 	{
         [Key]
-        public int TrackId{ get; set; }
+        public int TrackID{ get; set; }
 
-        public int  OrderId { get; set; }
+        public int CompanyOrdersID { get; set; }
 
-        public virtual Orders Orders {get; set; } = null!;
+        public virtual CompanyOrders CompanyOrders { get; set; } = null!;
 
         //Gps Coords
         public float Latitude { get; set; }

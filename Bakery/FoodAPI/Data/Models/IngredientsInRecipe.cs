@@ -7,10 +7,10 @@ namespace FoodAPI.Data.Models
     {
 
         public int Quantity { get; set; }
-        public int RecipeId { get; set; }
+        public int RecipeID { get; set; }
         public Recipe Recipe { get; set; } = null!;
 
-        public int StockId { get; set; }
+        public int StockID { get; set; }
         public Stock Stock { get; set; } = null!;
 
 

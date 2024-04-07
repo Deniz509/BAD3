@@ -5,11 +5,11 @@ namespace FoodAPI.Data.Models
     public class Stock
     {
         [Key]
-        public int StockId { get; set; }
+        public int StockID { get; set; }
 
         public int Quantity { get; set; }
 
-        public string IngredientName { get; set; }
+        public string Name { get; set; }
 
         public ICollection<IngredientsInRecipe> IngredientsInRecipes { get; } = new List<IngredientsInRecipe>();
 
