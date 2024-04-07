@@ -7,13 +7,13 @@ namespace FoodAPI.Data
 {
     public class BakeryDbContext : DbContext
     {
-        public DbSet<BakingGoods> BakingGoods { get; set; }
-        public DbSet<Batch> Batch { get; set; }
-        public DbSet<CompanyOrders> CompanyOrders { get; set; }
         public DbSet<Dispatch> Dispatch { get; set; }
         public DbSet<Recipe> Recipe { get; set; }
         public DbSet<Stock> Stock { get; set; }
         public DbSet<Allergen> Allergen { get; set; }
+        public DbSet<BakingGoods> BakingGoods { get; set; }
+        public DbSet<Batch> Batch { get; set; }
+        public DbSet<CompanyOrders> CompanyOrders { get; set; }
         public DbSet<IngredientsInRecipe> IngredientsInRecipes { get; set; }
 
 
@@ -71,8 +71,6 @@ namespace FoodAPI.Data
                 .WithMany(s => s.IngredientsInRecipes)
                 .HasForeignKey(rs => rs.StockID);
 
-
-
             modelBuilder.Entity<Allergen>()
                 .HasOne(e => e.Stock)
                 .WithOne(e => e.Allergen)
@@ -80,6 +78,7 @@ namespace FoodAPI.Data
                 .IsRequired();
 
                 
+                // Initializing data for the BakingGoods entity.
             modelBuilder.Entity<BakingGoods>().HasData(
                 new BakingGoods { BakingGoodsID = 1, Name = "Citronmaane", Quantity = 232, CompanyOrdersID = 1, RecipeID = 1 },
                 new BakingGoods { BakingGoodsID = 2, Name = "Baklava", Quantity = 1000, CompanyOrdersID = 2, RecipeID = 2 },
@@ -87,6 +86,7 @@ namespace FoodAPI.Data
                 new BakingGoods { BakingGoodsID = 4, Name = "Kunefe", Quantity = 999, CompanyOrdersID = 4, RecipeID = 4 }
                 );
 
+                // Initializing data for the Batch entity.
             modelBuilder.Entity<Batch>().HasData(
                 new Batch { BatchID = 1, BakingGoodsID = 1, StartTime = DateTime.Now, FinishTime = DateTime.Now.AddMinutes(40), Delay = 40 },
                 new Batch { BatchID = 2, BakingGoodsID = 2, StartTime = DateTime.Now.AddMinutes(50), FinishTime = DateTime.Now.AddMinutes(70), Delay = 0 },
@@ -94,7 +94,7 @@ namespace FoodAPI.Data
                 new Batch { BatchID = 4, BakingGoodsID = 4, StartTime = DateTime.Now.AddMinutes(130), FinishTime = DateTime.Now.AddMinutes(150), Delay = 56 }
                 );
 
-                
+                 // Initializing data for the Dispatch entity.
             modelBuilder.Entity<Dispatch>().HasData(
                 new Dispatch { TrackID = 1, CompanyOrdersID = 1, Longitude = 139, Latitude = 931 },
                 new Dispatch { TrackID = 2, CompanyOrdersID = 2, Longitude = 759, Latitude = 957 },
@@ -102,7 +102,7 @@ namespace FoodAPI.Data
                 new Dispatch { TrackID = 4, CompanyOrdersID = 4, Longitude = 329, Latitude = 923 }
                 );
 
-
+                 // Initializing data for the CompanyOrders entity.
             modelBuilder.Entity<CompanyOrders>().HasData(
                 new CompanyOrders { CompanyOrdersID = 1, DeliveryDate = "12032002 2205", DeliveryPlace = "Superbrugsen" },
                 new CompanyOrders { CompanyOrdersID = 2, DeliveryDate = "02052001 2240", DeliveryPlace = "Bilka" },
@@ -110,7 +110,7 @@ namespace FoodAPI.Data
                 new CompanyOrders { CompanyOrdersID = 4, DeliveryDate = "03082001 2359", DeliveryPlace = "SuperBest" }
                 );
                 
-
+                 // Initializing data for the Recipe entity.
             modelBuilder.Entity<Recipe>().HasData(
                 new Recipe { RecipeID = 1, Name = "Citronmaane" },
                 new Recipe { RecipeID = 2, Name = "Baklava" },
@@ -118,7 +118,7 @@ namespace FoodAPI.Data
                 new Recipe { RecipeID = 4, Name = "Kunefe" }
             );
 
-
+                 // Initializing data for the Stock entity.
             modelBuilder.Entity<Stock>().HasData(
                 new Stock { StockID = 1, Name = "Flour", Quantity = 123, },
                 new Stock { StockID = 2, Name = "Leftover Cake", Quantity = 435 },
@@ -131,28 +131,34 @@ namespace FoodAPI.Data
                 new Stock { StockID = 9, Name = "Baking soda", Quantity = 243 }
                 );
 
-            modelBuilder.Entity<IngredientsInRecipe>().HasData(
 
+            modelBuilder.Entity<IngredientsInRecipe>().HasData(
                 //Citronmaane
                 new IngredientsInRecipe { Quantity = 1000, RecipeID = 1, StockID = 1 },
                 new IngredientsInRecipe { Quantity = 2300, RecipeID = 1, StockID = 2 },
+                new IngredientsInRecipe { Quantity = 3000, RecipeID = 1, StockID = 3 },
+                new IngredientsInRecipe { Quantity = 1230, RecipeID = 1, StockID = 4 },
 
                 //Baklava
                 new IngredientsInRecipe { Quantity = 100, RecipeID = 2, StockID = 3 },
                 new IngredientsInRecipe { Quantity = 2400, RecipeID = 2, StockID = 4 },
-                new IngredientsInRecipe { Quantity = 300, RecipeID = 2, StockID = 5 },
+                new IngredientsInRecipe { Quantity = 250, RecipeID = 2, StockID = 5 },
+                new IngredientsInRecipe { Quantity = 300, RecipeID = 2, StockID = 2 },
 
                 //Jalabe
-                new IngredientsInRecipe { Quantity = 1000, RecipeID = 3, StockID = 1 },
+                new IngredientsInRecipe { Quantity = 1000, RecipeID = 3, StockID = 7 },
                 new IngredientsInRecipe { Quantity = 2300, RecipeID = 3, StockID = 2 },
-                new IngredientsInRecipe { Quantity = 23, RecipeID = 3, StockID = 6 },
+                new IngredientsInRecipe { Quantity = 230, RecipeID = 3, StockID = 6 },
                 new IngredientsInRecipe { Quantity = 15000, RecipeID = 3, StockID = 3 },
 
                 //Kunefe
                 new IngredientsInRecipe { Quantity = 200, RecipeID = 4, StockID = 7 },
-                new IngredientsInRecipe { Quantity = 300, RecipeID = 4, StockID = 8 }
+                new IngredientsInRecipe { Quantity = 300, RecipeID = 4, StockID = 8 },
+                new IngredientsInRecipe { Quantity = 200, RecipeID = 4, StockID = 3 },
+                new IngredientsInRecipe { Quantity = 300, RecipeID = 4, StockID = 4 }
             );
 
+                 // Initializing data for the Allergen entity.
             modelBuilder.Entity<Allergen>().HasData(
                 new Allergen { AllergenID = 1, Name = "Leavening agent", StockID = 1 },
                 new Allergen { AllergenID = 2, Name = "Alcohol", StockID = 2 },
@@ -164,8 +170,6 @@ namespace FoodAPI.Data
                 new Allergen { AllergenID = 8, Name = "Water", StockID = 8 },
                 new Allergen { AllergenID = 9, Name = "Protein", StockID = 9 }
             );
-
-
         }
     }
 }
