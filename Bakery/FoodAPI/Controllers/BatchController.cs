@@ -23,15 +23,15 @@ namespace FoodAPI.Controllers
         {
 
 
-            var first = from i in _context.Batch
+            var Batch_var = from i in _context.Batch
                         where i.BatchID.Equals(BatchID)
                         select i;
-            if (first == null)
+            if (Batch_var == null)
                 return NotFound();
 
-            var second =
+            var BakingGoods_var =
                 from bakingGoods in _context.BakingGoods
-                join batch in first
+                join batch in Batch_var
                 on bakingGoods.BakingGoodsID equals batch.BakingGoodsID
                 select new
                 {
@@ -39,18 +39,18 @@ namespace FoodAPI.Controllers
                     recipeID = bakingGoods.RecipeID
                 };
 
-            var third =
+            var Recipe_var =
                 from recipe in _context.Recipe
-                join bg in second
+                join bg in BakingGoods_var
                 on recipe.RecipeID equals bg.recipeID
                 select new
                 {
                     recipeID = recipe.RecipeID
                 };
 
-            var fourth =
+            var Ingredients_var =
                 from ingredient in _context.Ingredients
-                join re in third
+                join re in Recipe_var
                 on ingredient.RecipeID equals re.recipeID
                 select new
                 {
@@ -58,9 +58,9 @@ namespace FoodAPI.Controllers
                     Quantity = ingredient.Quantity
                 };
 
-            var fifth =
+            var Stock_var =
                 from stock in _context.Stock
-                join ing in fourth
+                join ing in Ingredients_var
                 on stock.StockID equals ing.stockID
                 select new
                 {
@@ -69,9 +69,9 @@ namespace FoodAPI.Controllers
                     Quantity = ing.Quantity
                 };
 
-            var res =
+            var Allergen_var =
                 from allergen in _context.Allergen
-                join stk in fifth
+                join stk in Stock_var
                 on allergen.StockID equals stk.stockID
                 select new
                 {
@@ -81,7 +81,7 @@ namespace FoodAPI.Controllers
                 };
 
 
-            return Ok(res);
+            return Ok(Allergen_var);
         }
 
         // 7. Get the average delay for all the batches

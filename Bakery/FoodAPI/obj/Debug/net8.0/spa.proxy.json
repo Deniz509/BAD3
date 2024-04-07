@@ -3,7 +3,7 @@
 "ServerUrl": "",
 "RedirectUrl": "",
 "LaunchCommand": "",
-"WorkingDirectory": "C:\\Users\\deniz\\Desktop\\BAD3-aflv\\BAD3\\Bakery\\FoodAPI",
+"WorkingDirectory": "C:\\Users\\Monee\\Desktop\\github\\BAD3\\Bakery\\FoodAPI",
 "MaxTimeoutInSeconds": "120",
 "KeepRunning": "false"
 }
