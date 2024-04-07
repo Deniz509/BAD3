@@ -12,7 +12,7 @@ namespace FoodAPI.Data.Models
 
         public string DeliveryPlace { get; set; }
 
-        public ICollection<Packets> Packets { get; } = new List<Packets>();
+        public ICollection<Dispatch> Dispatch { get; } = new List<Dispatch>();
 
         public ICollection<BakingGoods> BakingGoods { get; } = new List<BakingGoods>();
     }
