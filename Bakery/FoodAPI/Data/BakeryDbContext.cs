@@ -80,14 +80,13 @@ namespace FoodAPI.Data
                 .IsRequired();
 
 
-
             modelBuilder.Entity<CompanyOrders>().HasData(
-    new CompanyOrders { CompanyOrdersID = 1, DeliveryDate = "12032002 2205", DeliveryPlace = "Superbrugsen" },
-    new CompanyOrders { CompanyOrdersID = 2, DeliveryDate = "02052001 2240", DeliveryPlace = "Bilka" },
-    new CompanyOrders { CompanyOrdersID = 3, DeliveryDate = "16032003 1600", DeliveryPlace = "Lidl" },
-    new CompanyOrders { CompanyOrdersID = 4, DeliveryDate = "03082001 2359", DeliveryPlace = "SuperBest" }
+                new CompanyOrders { CompanyOrdersID = 1, DeliveryDate = "12032002 2205", DeliveryPlace = "Superbrugsen" },
+                new CompanyOrders { CompanyOrdersID = 2, DeliveryDate = "02052001 2240", DeliveryPlace = "Bilka" },
+                new CompanyOrders { CompanyOrdersID = 3, DeliveryDate = "16032003 1600", DeliveryPlace = "Lidl" },
+                new CompanyOrders { CompanyOrdersID = 4, DeliveryDate = "03082001 2359", DeliveryPlace = "SuperBest" }
 
-);
+                );
 
 
             modelBuilder.Entity<BakingGoods>().HasData(

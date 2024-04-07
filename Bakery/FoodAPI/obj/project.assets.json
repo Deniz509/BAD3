@@ -8584,23 +8584,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nahimi\\.nuget\\packages\\": {},
+    "C:\\Users\\deniz\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nahimi\\OneDrive\\Skrivebord\\BAD\\BAD3\\Bakery\\FoodAPI\\FoodAPI.csproj",
+      "projectUniqueName": "C:\\Users\\deniz\\Desktop\\BAD3-aflv\\BAD3\\Bakery\\FoodAPI\\FoodAPI.csproj",
       "projectName": "FoodAPI",
-      "projectPath": "C:\\Users\\nahimi\\OneDrive\\Skrivebord\\BAD\\BAD3\\Bakery\\FoodAPI\\FoodAPI.csproj",
-      "packagesPath": "C:\\Users\\nahimi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nahimi\\OneDrive\\Skrivebord\\BAD\\BAD3\\Bakery\\FoodAPI\\obj\\",
+      "projectPath": "C:\\Users\\deniz\\Desktop\\BAD3-aflv\\BAD3\\Bakery\\FoodAPI\\FoodAPI.csproj",
+      "packagesPath": "C:\\Users\\deniz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\deniz\\Desktop\\BAD3-aflv\\BAD3\\Bakery\\FoodAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\nahimi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\deniz\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
