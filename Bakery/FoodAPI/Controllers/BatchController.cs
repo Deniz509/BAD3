@@ -18,13 +18,13 @@ namespace FoodAPI.Controllers
             _context = context;
         }
 
-        [HttpGet("IngredientsInBatch4/{id}")]
-        public ActionResult GetIngredientsAndAllergensFromBatch(int id)
+        [HttpGet("IngredientsInBatch4/{BatchID}")]
+        public ActionResult GetIngredientsAndAllergensFromBatch(int BatchID)
         {
 
 
             var first = from i in _context.Batch
-                        where i.BatchId.Equals(id)
+                        where i.BatchID.Equals(BatchID)
                         select i;
             if (first == null)
                 return NotFound();
@@ -32,44 +32,44 @@ namespace FoodAPI.Controllers
             var second =
                 from bakingGoods in _context.BakingGoods
                 join batch in first
-                on bakingGoods.BakingGoodsId equals batch.BakingGoodsId
+                on bakingGoods.BakingGoodsID equals batch.BakingGoodsID
                 select new
                 {
-                    bakingGoodsId = bakingGoods.BakingGoodsId,
-                    recipeId = bakingGoods.RecipeId
+                    bakingGoodsId = bakingGoods.BakingGoodsID,
+                    recipeId = bakingGoods.RecipeID
                 };
 
             var third =
                 from recipe in _context.Recipe
                 join bg in second
-                on recipe.RecipeId equals bg.recipeId
+                on recipe.RecipeID equals bg.recipeId
                 select new
                 {
-                    recipeId = recipe.RecipeId
+                    recipeId = recipe.RecipeID
                 };
             var fourth =
                 from ingredient in _context.IngredientsInRecipes
                 join re in third
-                on ingredient.RecipeId equals re.recipeId
+                on ingredient.RecipeID equals re.recipeId
                 select new
                 {
-                    stockId = ingredient.StockId,
+                    stockId = ingredient.StockID,
                     Quantity = ingredient.Quantity
                 };
             var fifth =
                 from stock in _context.Stock
                 join ing in fourth
-                on stock.StockId equals ing.stockId
+                on stock.StockID equals ing.stockId
                 select new
                 {
-                    ingredientName = stock.IngredientName,
+                    ingredientName = stock.Name,
                     stockId = ing.stockId,
                     Quantity = ing.Quantity
                 };
             var res =
                 from allergen in _context.Allergen
                 join stk in fifth
-                on allergen.StockId equals stk.stockId
+                on allergen.StockID equals stk.stockId
                 select new
                 {
                     ingredientName = stk.ingredientName,

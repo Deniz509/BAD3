@@ -18,22 +18,22 @@ namespace FoodAPI.Controllers
         }
 
         // 5. Get the track ids corresponding to an order
-        [HttpGet("GetTrackIdsOfOrder5/{id}")]
-        public ActionResult GetTrackIdsOfOrder(int id)
+        [HttpGet("GetTrackIdsOfOrder5/{TrackID}")]
+        public ActionResult GetTrackIdsOfOrder(int TrackID)
         {
 
-            var packet = from i in _context.Packets
-                        where i.OrderId.Equals(id)
+            var packet = from i in _context.Dispatch
+                        where i.CompanyOrdersID.Equals(TrackID)
                         select i;
             if (packet == null)
                 return NotFound();
             var res =
-                from orders in _context.Orders
+                from orders in _context.CompanyOrders
                 join pack in packet
-                on orders.OrdersId equals pack.OrderId
+                on orders.CompanyOrdersID equals pack.CompanyOrdersID
                 select new
                 {
-                    TrackId = pack.TrackId,
+                    TrackId = pack.TrackID,
                     Address = orders.DeliveryPlace,
                     Latitude = pack.Latitude,
                     Longitude = pack.Longitude

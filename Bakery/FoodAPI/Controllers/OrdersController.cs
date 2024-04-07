@@ -22,7 +22,7 @@ namespace FoodAPI.Controllers
         [HttpGet("OrderDetails2")]
         public ActionResult GetOrderDetails()
         {
-            var orderDetails = _context.Orders.Select(o => new
+            var orderDetails = _context.CompanyOrders.Select(o => new
             {
                 o.DeliveryPlace,
                 o.DeliveryDate
@@ -38,11 +38,11 @@ namespace FoodAPI.Controllers
         public ActionResult GetBakingGoodsInOrders()
         {
             var bakingGoodsInOrders = _context.BakingGoods
-                .GroupBy(bg => bg.BakingGoodsName)
+                .GroupBy(bg => bg.Name)
                 .Select(bg => new
                 {
                     BakingGoodsName = bg.Key,
-                    TotalAmount = bg.Sum(bg => bg.Amount)
+                    TotalAmount = bg.Sum(bg => bg.Quantity)
                 })
                 .OrderBy(bg => bg.TotalAmount)
                 .ToList();

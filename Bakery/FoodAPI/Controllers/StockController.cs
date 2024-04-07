@@ -29,7 +29,7 @@ namespace FoodAPI.Controllers
                 return BadRequest();
             }
 
-            var existingIngredient = _context.Stock.FirstOrDefault(s => s.IngredientName.ToLower() == name.ToLower());
+            var existingIngredient = _context.Stock.FirstOrDefault(s => s.Name.ToLower() == name.ToLower());
             if (existingIngredient != null)
             {
                 existingIngredient.Quantity += quantity;
@@ -41,7 +41,7 @@ namespace FoodAPI.Controllers
             {
 
                 Quantity = quantity,
-                IngredientName = name
+                Name = name
             };
 
             _context.Stock.Add(newIngredient);
@@ -53,7 +53,7 @@ namespace FoodAPI.Controllers
         [HttpDelete("remove-ingredient-from-stock")]
         public ActionResult RemoveIngredientFromStock(int id)
         {
-            var stock = _context.Stock.FirstOrDefault(s => s.StockId == id);
+            var stock = _context.Stock.FirstOrDefault(s => s.StockID == id);
 
             if (stock == null)
             {
@@ -79,7 +79,7 @@ namespace FoodAPI.Controllers
         public ActionResult UpdateIngredientQuantity(int Stockid, int quantity)
         {
 
-            var stock = _context.Stock.FirstOrDefault(s => s.StockId == Stockid);
+            var stock = _context.Stock.FirstOrDefault(s => s.StockID == Stockid);
 
             if (stock == null)
             {
