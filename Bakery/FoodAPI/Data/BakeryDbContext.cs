@@ -79,16 +79,7 @@ namespace FoodAPI.Data
                 .HasForeignKey<Allergen>(e => e.StockID)
                 .IsRequired();
 
-
-            modelBuilder.Entity<CompanyOrders>().HasData(
-                new CompanyOrders { CompanyOrdersID = 1, DeliveryDate = "12032002 2205", DeliveryPlace = "Superbrugsen" },
-                new CompanyOrders { CompanyOrdersID = 2, DeliveryDate = "02052001 2240", DeliveryPlace = "Bilka" },
-                new CompanyOrders { CompanyOrdersID = 3, DeliveryDate = "16032003 1600", DeliveryPlace = "Lidl" },
-                new CompanyOrders { CompanyOrdersID = 4, DeliveryDate = "03082001 2359", DeliveryPlace = "SuperBest" }
-
-                );
-
-
+                
             modelBuilder.Entity<BakingGoods>().HasData(
                 new BakingGoods { BakingGoodsID = 1, Name = "Citronmaane", Quantity = 232, CompanyOrdersID = 1, RecipeID = 1 },
                 new BakingGoods { BakingGoodsID = 2, Name = "Baklava", Quantity = 1000, CompanyOrdersID = 2, RecipeID = 2 },
@@ -101,17 +92,32 @@ namespace FoodAPI.Data
                 new Batch { BatchID = 2, BakingGoodsID = 2, StartTime = DateTime.Now.AddMinutes(50), FinishTime = DateTime.Now.AddMinutes(70), Delay = 0 },
                 new Batch { BatchID = 3, BakingGoodsID = 3, StartTime = DateTime.Now.AddMinutes(70), FinishTime = DateTime.Now.AddMinutes(100), Delay = 20 },
                 new Batch { BatchID = 4, BakingGoodsID = 4, StartTime = DateTime.Now.AddMinutes(130), FinishTime = DateTime.Now.AddMinutes(150), Delay = 56 }
-
                 );
 
+                
             modelBuilder.Entity<Dispatch>().HasData(
-
                 new Dispatch { TrackID = 1, CompanyOrdersID = 1, Longitude = 139, Latitude = 931 },
                 new Dispatch { TrackID = 2, CompanyOrdersID = 2, Longitude = 759, Latitude = 957 },
                 new Dispatch { TrackID = 3, CompanyOrdersID = 3, Longitude = 529, Latitude = 1 },
                 new Dispatch { TrackID = 4, CompanyOrdersID = 4, Longitude = 329, Latitude = 923 }
+                );
 
+
+            modelBuilder.Entity<CompanyOrders>().HasData(
+                new CompanyOrders { CompanyOrdersID = 1, DeliveryDate = "12032002 2205", DeliveryPlace = "Superbrugsen" },
+                new CompanyOrders { CompanyOrdersID = 2, DeliveryDate = "02052001 2240", DeliveryPlace = "Bilka" },
+                new CompanyOrders { CompanyOrdersID = 3, DeliveryDate = "16032003 1600", DeliveryPlace = "Lidl" },
+                new CompanyOrders { CompanyOrdersID = 4, DeliveryDate = "03082001 2359", DeliveryPlace = "SuperBest" }
+                );
+                
+
+            modelBuilder.Entity<Recipe>().HasData(
+                new Recipe { RecipeID = 1, Name = "Citronmaane" },
+                new Recipe { RecipeID = 2, Name = "Baklava" },
+                new Recipe { RecipeID = 3, Name = "Jalabe" },
+                new Recipe { RecipeID = 4, Name = "Kunefe" }
             );
+
 
             modelBuilder.Entity<Stock>().HasData(
                 new Stock { StockID = 1, Name = "Flour", Quantity = 123, },
@@ -123,15 +129,7 @@ namespace FoodAPI.Data
                 new Stock { StockID = 7, Name = "Rum", Quantity = 234 },
                 new Stock { StockID = 8, Name = "Baking Powder", Quantity = 675 },
                 new Stock { StockID = 9, Name = "Baking soda", Quantity = 243 }
-            );
-
-            modelBuilder.Entity<Recipe>().HasData(
-
-                new Recipe { RecipeID = 1, Name = "Citronmaane" },
-                new Recipe { RecipeID = 2, Name = "Baklava" },
-                new Recipe { RecipeID = 3, Name = "Jalabe" },
-                new Recipe { RecipeID = 4, Name = "Kunefe" }
-            );
+                );
 
             modelBuilder.Entity<IngredientsInRecipe>().HasData(
 
