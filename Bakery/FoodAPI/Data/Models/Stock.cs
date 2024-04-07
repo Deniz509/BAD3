@@ -11,7 +11,7 @@ namespace FoodAPI.Data.Models
 
         public string Name { get; set; }
 
-        public ICollection<IngredientsInRecipe> IngredientsInRecipes { get; } = new List<IngredientsInRecipe>();
+        public ICollection<Ingredients> Ingredients { get; } = new List<Ingredients>();
 
         public Allergen? Allergen { get; set; }
 

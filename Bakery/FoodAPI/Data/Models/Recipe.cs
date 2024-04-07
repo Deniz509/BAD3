@@ -9,7 +9,7 @@ namespace FoodAPI.Data.Models
 
         public string Name { get; set; }
 
-        public ICollection<IngredientsInRecipe> IngredientsInRecipes { get; } = new List<IngredientsInRecipe>();
+        public ICollection<Ingredients> Ingredients { get; } = new List<Ingredients>();
 
         public BakingGoods? BakingGoods { get; set; }
 

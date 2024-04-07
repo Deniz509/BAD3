@@ -14,12 +14,12 @@ namespace FoodAPI.Data
         public DbSet<BakingGoods> BakingGoods { get; set; }
         public DbSet<Batch> Batch { get; set; }
         public DbSet<CompanyOrders> CompanyOrders { get; set; }
-        public DbSet<IngredientsInRecipe> IngredientsInRecipes { get; set; }
+        public DbSet<Ingredients> Ingredients { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=127.0.0.1,1433;Database=BADASS3Aflevering8thTry;User Id=sa;Password=<SoftwareTeknologi123>;TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer("Data Source=127.0.0.1,1433;Database=BADASS3Aflevering8thTry;User Id=sa;Password=<YourStrong@Passw0rd>;TrustServerCertificate=True");
         }
 
         public BakeryDbContext(DbContextOptions<BakeryDbContext> options) : base(options) { }
@@ -58,17 +58,17 @@ namespace FoodAPI.Data
                 .IsRequired();
 
 
-            modelBuilder.Entity<IngredientsInRecipe>()
+            modelBuilder.Entity<Ingredients>()
             .HasKey(rs => new { rs.RecipeID, rs.StockID });
 
-            modelBuilder.Entity<IngredientsInRecipe>()
+            modelBuilder.Entity<Ingredients>()
                 .HasOne(rs => rs.Recipe)
-                .WithMany(r => r.IngredientsInRecipes)
+                .WithMany(r => r.Ingredients)
                 .HasForeignKey(rs => rs.RecipeID);
 
-            modelBuilder.Entity<IngredientsInRecipe>()
+            modelBuilder.Entity<Ingredients>()
                 .HasOne(rs => rs.Stock)
-                .WithMany(s => s.IngredientsInRecipes)
+                .WithMany(s => s.Ingredients)
                 .HasForeignKey(rs => rs.StockID);
 
             modelBuilder.Entity<Allergen>()
@@ -132,30 +132,30 @@ namespace FoodAPI.Data
                 );
 
 
-            modelBuilder.Entity<IngredientsInRecipe>().HasData(
+            modelBuilder.Entity<Ingredients>().HasData(
                 //Citronmaane
-                new IngredientsInRecipe { Quantity = 1000, RecipeID = 1, StockID = 1 },
-                new IngredientsInRecipe { Quantity = 2300, RecipeID = 1, StockID = 2 },
-                new IngredientsInRecipe { Quantity = 3000, RecipeID = 1, StockID = 3 },
-                new IngredientsInRecipe { Quantity = 1230, RecipeID = 1, StockID = 4 },
+                new Ingredients { Quantity = 1000, RecipeID = 1, StockID = 1 },
+                new Ingredients { Quantity = 2300, RecipeID = 1, StockID = 2 },
+                new Ingredients { Quantity = 3000, RecipeID = 1, StockID = 3 },
+                new Ingredients { Quantity = 1230, RecipeID = 1, StockID = 4 },
 
                 //Baklava
-                new IngredientsInRecipe { Quantity = 100, RecipeID = 2, StockID = 3 },
-                new IngredientsInRecipe { Quantity = 2400, RecipeID = 2, StockID = 4 },
-                new IngredientsInRecipe { Quantity = 250, RecipeID = 2, StockID = 5 },
-                new IngredientsInRecipe { Quantity = 300, RecipeID = 2, StockID = 2 },
+                new Ingredients { Quantity = 100, RecipeID = 2, StockID = 3 },
+                new Ingredients { Quantity = 2400, RecipeID = 2, StockID = 4 },
+                new Ingredients { Quantity = 250, RecipeID = 2, StockID = 5 },
+                new Ingredients { Quantity = 300, RecipeID = 2, StockID = 2 },
 
                 //Jalabe
-                new IngredientsInRecipe { Quantity = 1000, RecipeID = 3, StockID = 7 },
-                new IngredientsInRecipe { Quantity = 2300, RecipeID = 3, StockID = 2 },
-                new IngredientsInRecipe { Quantity = 230, RecipeID = 3, StockID = 6 },
-                new IngredientsInRecipe { Quantity = 15000, RecipeID = 3, StockID = 3 },
+                new Ingredients { Quantity = 1000, RecipeID = 3, StockID = 7 },
+                new Ingredients { Quantity = 2300, RecipeID = 3, StockID = 2 },
+                new Ingredients { Quantity = 230, RecipeID = 3, StockID = 6 },
+                new Ingredients { Quantity = 15000, RecipeID = 3, StockID = 3 },
 
                 //Kunefe
-                new IngredientsInRecipe { Quantity = 200, RecipeID = 4, StockID = 7 },
-                new IngredientsInRecipe { Quantity = 300, RecipeID = 4, StockID = 8 },
-                new IngredientsInRecipe { Quantity = 200, RecipeID = 4, StockID = 3 },
-                new IngredientsInRecipe { Quantity = 300, RecipeID = 4, StockID = 4 }
+                new Ingredients { Quantity = 200, RecipeID = 4, StockID = 7 },
+                new Ingredients { Quantity = 300, RecipeID = 4, StockID = 8 },
+                new Ingredients { Quantity = 200, RecipeID = 4, StockID = 3 },
+                new Ingredients { Quantity = 300, RecipeID = 4, StockID = 4 }
             );
 
                  // Initializing data for the Allergen entity.

@@ -47,8 +47,9 @@ namespace FoodAPI.Controllers
                 {
                     recipeID = recipe.RecipeID
                 };
+
             var fourth =
-                from ingredient in _context.IngredientsInRecipes
+                from ingredient in _context.Ingredients
                 join re in third
                 on ingredient.RecipeID equals re.recipeID
                 select new
@@ -56,6 +57,7 @@ namespace FoodAPI.Controllers
                     stockID = ingredient.StockID,
                     Quantity = ingredient.Quantity
                 };
+
             var fifth =
                 from stock in _context.Stock
                 join ing in fourth
@@ -66,6 +68,7 @@ namespace FoodAPI.Controllers
                     stockID = ing.stockID,
                     Quantity = ing.Quantity
                 };
+
             var res =
                 from allergen in _context.Allergen
                 join stk in fifth
