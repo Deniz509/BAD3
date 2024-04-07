@@ -8,11 +8,11 @@ namespace FoodAPI.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Produces("application/json")]
-    public class PacketsController : ControllerBase
+    public class DispatchController : ControllerBase
     {
         private readonly BakeryDbContext _context;
 
-        public PacketsController(BakeryDbContext context)
+        public DispatchController(BakeryDbContext context)
         {
             _context = context;
         }

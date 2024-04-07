@@ -9,11 +9,11 @@ namespace FoodAPI.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Produces("application/json")]
-    public class OrdersController : ControllerBase
+    public class CompanyOrdersController : ControllerBase
     {
         private readonly BakeryDbContext _context;
 
-        public OrdersController(BakeryDbContext context)
+        public CompanyOrdersController(BakeryDbContext context)
         {
             _context = context;
         }
