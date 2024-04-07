@@ -198,32 +198,32 @@ namespace FoodAPI.Migrations
                             BatchID = 1,
                             BakingGoodsID = 1,
                             Delay = 40f,
-                            FinishTime = new DateTime(2024, 4, 7, 17, 36, 50, 241, DateTimeKind.Local).AddTicks(6590),
-                            StartTime = new DateTime(2024, 4, 7, 16, 56, 50, 241, DateTimeKind.Local).AddTicks(6577)
+                            FinishTime = new DateTime(2024, 4, 7, 18, 22, 50, 813, DateTimeKind.Local).AddTicks(9958),
+                            StartTime = new DateTime(2024, 4, 7, 17, 42, 50, 813, DateTimeKind.Local).AddTicks(9947)
                         },
                         new
                         {
                             BatchID = 2,
                             BakingGoodsID = 2,
                             Delay = 0f,
-                            FinishTime = new DateTime(2024, 4, 7, 18, 6, 50, 241, DateTimeKind.Local).AddTicks(6596),
-                            StartTime = new DateTime(2024, 4, 7, 17, 46, 50, 241, DateTimeKind.Local).AddTicks(6596)
+                            FinishTime = new DateTime(2024, 4, 7, 18, 52, 50, 813, DateTimeKind.Local).AddTicks(9964),
+                            StartTime = new DateTime(2024, 4, 7, 18, 32, 50, 813, DateTimeKind.Local).AddTicks(9964)
                         },
                         new
                         {
                             BatchID = 3,
                             BakingGoodsID = 3,
                             Delay = 20f,
-                            FinishTime = new DateTime(2024, 4, 7, 18, 36, 50, 241, DateTimeKind.Local).AddTicks(6598),
-                            StartTime = new DateTime(2024, 4, 7, 18, 6, 50, 241, DateTimeKind.Local).AddTicks(6597)
+                            FinishTime = new DateTime(2024, 4, 7, 19, 22, 50, 813, DateTimeKind.Local).AddTicks(9966),
+                            StartTime = new DateTime(2024, 4, 7, 18, 52, 50, 813, DateTimeKind.Local).AddTicks(9966)
                         },
                         new
                         {
                             BatchID = 4,
                             BakingGoodsID = 4,
                             Delay = 56f,
-                            FinishTime = new DateTime(2024, 4, 7, 19, 26, 50, 241, DateTimeKind.Local).AddTicks(6600),
-                            StartTime = new DateTime(2024, 4, 7, 19, 6, 50, 241, DateTimeKind.Local).AddTicks(6599)
+                            FinishTime = new DateTime(2024, 4, 7, 20, 12, 50, 813, DateTimeKind.Local).AddTicks(9968),
+                            StartTime = new DateTime(2024, 4, 7, 19, 52, 50, 813, DateTimeKind.Local).AddTicks(9967)
                         });
                 });
 

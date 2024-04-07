@@ -18,7 +18,7 @@ namespace FoodAPI.Controllers
             _context = context;
         }
 
-        [HttpGet("IngredientsInBatch4/{BatchID}")]
+        [HttpGet("BatchID")]
         public ActionResult GetIngredientsAndAllergensFromBatch(int BatchID)
         {
 
@@ -82,7 +82,7 @@ namespace FoodAPI.Controllers
         }
 
         // 7. Get the average delay for all the batches
-        [HttpGet("AverageDelay7")]
+        [HttpGet("AverageDelay")]
         public ActionResult GetAverageDelay()
         {
             var averageDelay = _context.Batch.Average(b => b.Delay);

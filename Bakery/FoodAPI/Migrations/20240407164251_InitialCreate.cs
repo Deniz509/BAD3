@@ -269,10 +269,10 @@ namespace FoodAPI.Migrations
                 columns: new[] { "BatchID", "BakingGoodsID", "Delay", "FinishTime", "StartTime" },
                 values: new object[,]
                 {
-                    { 1, 1, 40f, new DateTime(2024, 4, 7, 17, 36, 50, 241, DateTimeKind.Local).AddTicks(6590), new DateTime(2024, 4, 7, 16, 56, 50, 241, DateTimeKind.Local).AddTicks(6577) },
-                    { 2, 2, 0f, new DateTime(2024, 4, 7, 18, 6, 50, 241, DateTimeKind.Local).AddTicks(6596), new DateTime(2024, 4, 7, 17, 46, 50, 241, DateTimeKind.Local).AddTicks(6596) },
-                    { 3, 3, 20f, new DateTime(2024, 4, 7, 18, 36, 50, 241, DateTimeKind.Local).AddTicks(6598), new DateTime(2024, 4, 7, 18, 6, 50, 241, DateTimeKind.Local).AddTicks(6597) },
-                    { 4, 4, 56f, new DateTime(2024, 4, 7, 19, 26, 50, 241, DateTimeKind.Local).AddTicks(6600), new DateTime(2024, 4, 7, 19, 6, 50, 241, DateTimeKind.Local).AddTicks(6599) }
+                    { 1, 1, 40f, new DateTime(2024, 4, 7, 18, 22, 50, 813, DateTimeKind.Local).AddTicks(9958), new DateTime(2024, 4, 7, 17, 42, 50, 813, DateTimeKind.Local).AddTicks(9947) },
+                    { 2, 2, 0f, new DateTime(2024, 4, 7, 18, 52, 50, 813, DateTimeKind.Local).AddTicks(9964), new DateTime(2024, 4, 7, 18, 32, 50, 813, DateTimeKind.Local).AddTicks(9964) },
+                    { 3, 3, 20f, new DateTime(2024, 4, 7, 19, 22, 50, 813, DateTimeKind.Local).AddTicks(9966), new DateTime(2024, 4, 7, 18, 52, 50, 813, DateTimeKind.Local).AddTicks(9966) },
+                    { 4, 4, 56f, new DateTime(2024, 4, 7, 20, 12, 50, 813, DateTimeKind.Local).AddTicks(9968), new DateTime(2024, 4, 7, 19, 52, 50, 813, DateTimeKind.Local).AddTicks(9967) }
                 });
 
             migrationBuilder.CreateIndex(

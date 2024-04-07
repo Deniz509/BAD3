@@ -18,7 +18,7 @@ namespace FoodAPI.Controllers
         }
 
         // 3. Get the list of baked goods in an order
-        [HttpGet("GetBakingGoodsInOrder3/{CompanyOrderID}")]
+        [HttpGet("CompanyOrderID")]
         public ActionResult GetBakingGoodsInOrder(int CompanyOrderID)
         {
             var bakingGoods = _context.BakingGoods.Where(bg => bg.CompanyOrdersID == CompanyOrderID).ToList();

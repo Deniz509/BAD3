@@ -21,7 +21,7 @@ namespace FoodAPI.Controllers
         }
 
         // Add new ingredient and quantity to stock
-        [HttpPost("add-ingredient-to-stock")]
+        [HttpPost("AddIngredient")]
         public ActionResult AddIngredientToStock(int quantity, string name)
         {
             if (quantity < 0 || string.IsNullOrEmpty(name))
@@ -50,7 +50,7 @@ namespace FoodAPI.Controllers
             return Ok();
         }
 
-        [HttpDelete("remove-ingredient-from-stock")]
+        [HttpDelete("RemoveIngredient")]
         public ActionResult RemoveIngredientFromStock(int id)
         {
             var stock = _context.Stock.FirstOrDefault(s => s.StockID == id);
@@ -68,14 +68,14 @@ namespace FoodAPI.Controllers
         }
 
         // 1. Get current stock
-        [HttpGet("current-stock1")]
+        [HttpGet("CurrentStock")]
         public ActionResult GetCurrentStock()
         {
             var currentStock = _context.GetCurrentStock().ToList();
             return Ok(currentStock);
         }
 
-        [HttpPut("update-ingredient-quantity")]
+        [HttpPut("UpdateIngredientQuantity")]
         public ActionResult UpdateIngredientQuantity(int Stockid, int quantity)
         {
 

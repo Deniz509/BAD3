@@ -18,7 +18,7 @@ namespace FoodAPI.Controllers
         }
 
         // 5. Get the track ids corresponding to an order
-        [HttpGet("GetTrackIdsOfOrder5/{TrackID}")]
+        [HttpGet("TrackID")]
         public ActionResult GetTrackIdsOfOrder(int TrackID)
         {
 

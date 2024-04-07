@@ -19,7 +19,7 @@ namespace FoodAPI.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=127.0.0.1,1433;Database=BADASS3Aflevering7thTry;User Id=sa;Password=<SoftwareTeknologi123>;TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer("Data Source=127.0.0.1,1433;Database=BADASS3Aflevering8thTry;User Id=sa;Password=<SoftwareTeknologi123>;TrustServerCertificate=True");
         }
 
         public BakeryDbContext(DbContextOptions<BakeryDbContext> options) : base(options) { }
