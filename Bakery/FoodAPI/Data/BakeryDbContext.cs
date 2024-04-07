@@ -105,12 +105,12 @@ namespace FoodAPI.Data
 
                 );
 
-            modelBuilder.Entity<Packets>().HasData(
+            modelBuilder.Entity<Dispatch>().HasData(
 
-                new Packets { TrackId = 1, OrderId = 1 , Longitude = 219, Latitude = 382},
-                new Packets { TrackId = 2, OrderId = 2, Longitude = 109, Latitude = 219},
-                new Packets { TrackId = 3, OrderId = 3, Longitude = 539, Latitude = 23},
-                new Packets { TrackId = 4, OrderId = 4, Longitude = 679, Latitude = 145}
+                new Dispatch { TrackId = 1, OrderId = 1 , Longitude = 219, Latitude = 382},
+                new Dispatch { TrackId = 2, OrderId = 2, Longitude = 109, Latitude = 219},
+                new Dispatch { TrackId = 3, OrderId = 3, Longitude = 539, Latitude = 23},
+                new Dispatch { TrackId = 4, OrderId = 4, Longitude = 679, Latitude = 145}
 
             );
 
