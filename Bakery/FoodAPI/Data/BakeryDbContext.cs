@@ -10,7 +10,7 @@ namespace FoodAPI.Data
         public DbSet<BakingGoods> BakingGoods { get; set; }
         public DbSet<Batch> Batch { get; set; }
         public DbSet<Orders> Orders { get; set; }
-        public DbSet<Dispatch> Packets { get; set; }
+        public DbSet<Dispatch> Dispatch { get; set; }
         public DbSet<Recipe> Recipe { get; set; }
         public DbSet<Stock> Stock { get; set; }
         public DbSet<Allergen> Allergen { get; set; }
@@ -34,7 +34,7 @@ namespace FoodAPI.Data
         {
 
             modelBuilder.Entity<Orders>()
-                .HasMany(o => o.Packets)
+                .HasMany(o => o.Dispatch)
                 .WithOne(p => p.Orders)
                 .HasForeignKey(p => p.OrderId)
                 .IsRequired();
