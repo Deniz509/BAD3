@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YjIvv1OQUnVWMeVk5eUqbMObsTdwf/3Jh17IbJ5bdYvgjfEoqi3Mith6o0jNxvxPPcL3tDE3wCkZLnfsssRWMw==",
+  "dgSpecHash": "rr4MOgO3gz+kR+vE83tEsehoVPgqqEOdlMAjCIc3c+3oh5riPkqI2492p9XunDuxZPJdBg+RcWjx2KiJbdnJSA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mikai\\Desktop\\bazarvest\\istanbulbageri\\istanbulbageri.csproj",
+  "projectFilePath": "C:\\Users\\mikai\\Desktop\\BAD3\\bazarvest\\istanbulbageri\\istanbulbageri.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mikai\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\mikai\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

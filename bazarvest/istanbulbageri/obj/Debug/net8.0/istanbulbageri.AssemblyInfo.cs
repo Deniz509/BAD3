@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("istanbulbageri")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+69d15234fa1aad08e4202d0afa48c340b87e7752")]
 [assembly: System.Reflection.AssemblyProductAttribute("istanbulbageri")]
 [assembly: System.Reflection.AssemblyTitleAttribute("istanbulbageri")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

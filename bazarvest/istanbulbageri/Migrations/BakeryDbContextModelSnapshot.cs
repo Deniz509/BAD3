@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace FoodAPI.Migrations
+namespace istanbulbageri.Migrations
 {
     [DbContext(typeof(BakeryDbContext))]
     partial class BakeryDbContextModelSnapshot : ModelSnapshot
@@ -198,32 +198,32 @@ namespace FoodAPI.Migrations
                             BatchID = 1,
                             BakingGoodsID = 1,
                             Delay = 40f,
-                            FinishTime = new DateTime(2024, 4, 7, 18, 22, 50, 813, DateTimeKind.Local).AddTicks(9958),
-                            StartTime = new DateTime(2024, 4, 7, 17, 42, 50, 813, DateTimeKind.Local).AddTicks(9947)
+                            FinishTime = new DateTime(2024, 4, 13, 14, 10, 54, 481, DateTimeKind.Local).AddTicks(8891),
+                            StartTime = new DateTime(2024, 4, 13, 13, 30, 54, 481, DateTimeKind.Local).AddTicks(8836)
                         },
                         new
                         {
                             BatchID = 2,
                             BakingGoodsID = 2,
                             Delay = 0f,
-                            FinishTime = new DateTime(2024, 4, 7, 18, 52, 50, 813, DateTimeKind.Local).AddTicks(9964),
-                            StartTime = new DateTime(2024, 4, 7, 18, 32, 50, 813, DateTimeKind.Local).AddTicks(9964)
+                            FinishTime = new DateTime(2024, 4, 13, 14, 40, 54, 481, DateTimeKind.Local).AddTicks(8899),
+                            StartTime = new DateTime(2024, 4, 13, 14, 20, 54, 481, DateTimeKind.Local).AddTicks(8898)
                         },
                         new
                         {
                             BatchID = 3,
                             BakingGoodsID = 3,
                             Delay = 20f,
-                            FinishTime = new DateTime(2024, 4, 7, 19, 22, 50, 813, DateTimeKind.Local).AddTicks(9966),
-                            StartTime = new DateTime(2024, 4, 7, 18, 52, 50, 813, DateTimeKind.Local).AddTicks(9966)
+                            FinishTime = new DateTime(2024, 4, 13, 15, 10, 54, 481, DateTimeKind.Local).AddTicks(8902),
+                            StartTime = new DateTime(2024, 4, 13, 14, 40, 54, 481, DateTimeKind.Local).AddTicks(8901)
                         },
                         new
                         {
                             BatchID = 4,
                             BakingGoodsID = 4,
                             Delay = 56f,
-                            FinishTime = new DateTime(2024, 4, 7, 20, 12, 50, 813, DateTimeKind.Local).AddTicks(9968),
-                            StartTime = new DateTime(2024, 4, 7, 19, 52, 50, 813, DateTimeKind.Local).AddTicks(9967)
+                            FinishTime = new DateTime(2024, 4, 13, 16, 0, 54, 481, DateTimeKind.Local).AddTicks(8906),
+                            StartTime = new DateTime(2024, 4, 13, 15, 40, 54, 481, DateTimeKind.Local).AddTicks(8905)
                         });
                 });
 
@@ -328,7 +328,7 @@ namespace FoodAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("FoodAPI.Data.Models.IngredientsInRecipe", b =>
+            modelBuilder.Entity("FoodAPI.Data.Models.Ingredients", b =>
                 {
                     b.Property<int>("RecipeID")
                         .HasColumnType("int");
@@ -343,7 +343,7 @@ namespace FoodAPI.Migrations
 
                     b.HasIndex("StockID");
 
-                    b.ToTable("IngredientsInRecipes");
+                    b.ToTable("Ingredients");
 
                     b.HasData(
                         new
@@ -357,6 +357,18 @@ namespace FoodAPI.Migrations
                             RecipeID = 1,
                             StockID = 2,
                             Quantity = 2300
+                        },
+                        new
+                        {
+                            RecipeID = 1,
+                            StockID = 3,
+                            Quantity = 3000
+                        },
+                        new
+                        {
+                            RecipeID = 1,
+                            StockID = 4,
+                            Quantity = 1230
                         },
                         new
                         {
@@ -374,12 +386,18 @@ namespace FoodAPI.Migrations
                         {
                             RecipeID = 2,
                             StockID = 5,
+                            Quantity = 250
+                        },
+                        new
+                        {
+                            RecipeID = 2,
+                            StockID = 2,
                             Quantity = 300
                         },
                         new
                         {
                             RecipeID = 3,
-                            StockID = 1,
+                            StockID = 7,
                             Quantity = 1000
                         },
                         new
@@ -392,7 +410,7 @@ namespace FoodAPI.Migrations
                         {
                             RecipeID = 3,
                             StockID = 6,
-                            Quantity = 23
+                            Quantity = 230
                         },
                         new
                         {
@@ -410,6 +428,18 @@ namespace FoodAPI.Migrations
                         {
                             RecipeID = 4,
                             StockID = 8,
+                            Quantity = 300
+                        },
+                        new
+                        {
+                            RecipeID = 4,
+                            StockID = 3,
+                            Quantity = 200
+                        },
+                        new
+                        {
+                            RecipeID = 4,
+                            StockID = 4,
                             Quantity = 300
                         });
                 });
@@ -581,16 +611,16 @@ namespace FoodAPI.Migrations
                     b.Navigation("CompanyOrders");
                 });
 
-            modelBuilder.Entity("FoodAPI.Data.Models.IngredientsInRecipe", b =>
+            modelBuilder.Entity("FoodAPI.Data.Models.Ingredients", b =>
                 {
                     b.HasOne("FoodAPI.Data.Models.Recipe", "Recipe")
-                        .WithMany("IngredientsInRecipes")
+                        .WithMany("Ingredients")
                         .HasForeignKey("RecipeID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("FoodAPI.Data.Models.Stock", "Stock")
-                        .WithMany("IngredientsInRecipes")
+                        .WithMany("Ingredients")
                         .HasForeignKey("StockID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -616,14 +646,14 @@ namespace FoodAPI.Migrations
                 {
                     b.Navigation("BakingGoods");
 
-                    b.Navigation("IngredientsInRecipes");
+                    b.Navigation("Ingredients");
                 });
 
             modelBuilder.Entity("FoodAPI.Data.Models.Stock", b =>
                 {
                     b.Navigation("Allergen");
 
-                    b.Navigation("IngredientsInRecipes");
+                    b.Navigation("Ingredients");
                 });
 #pragma warning restore 612, 618
         }

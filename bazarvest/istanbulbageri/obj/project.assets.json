@@ -8590,11 +8590,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mikai\\Desktop\\bazarvest\\istanbulbageri\\istanbulbageri.csproj",
+      "projectUniqueName": "C:\\Users\\mikai\\Desktop\\BAD3\\bazarvest\\istanbulbageri\\istanbulbageri.csproj",
       "projectName": "istanbulbageri",
-      "projectPath": "C:\\Users\\mikai\\Desktop\\bazarvest\\istanbulbageri\\istanbulbageri.csproj",
+      "projectPath": "C:\\Users\\mikai\\Desktop\\BAD3\\bazarvest\\istanbulbageri\\istanbulbageri.csproj",
       "packagesPath": "C:\\Users\\mikai\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mikai\\Desktop\\bazarvest\\istanbulbageri\\obj\\",
+      "outputPath": "C:\\Users\\mikai\\Desktop\\BAD3\\bazarvest\\istanbulbageri\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
