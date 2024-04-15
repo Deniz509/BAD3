@@ -6,11 +6,16 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore;
 
+
+//Here we are defining the controller as an API controller
 namespace FoodAPI.Controllers
 {
+    // This is the controller for the Stock controller.
     [Route("api/[controller]")]
     [ApiController]
     [Produces("application/json")]
+
+    // Here we have a class for the Stock controller.
     public class StockController : ControllerBase
     {
         private readonly BakeryDbContext _context;
@@ -21,6 +26,7 @@ namespace FoodAPI.Controllers
         }
 
         // Add new ingredient and quantity to stock
+        // We are defining the route for the method
         [HttpPost("AddIngredient")]
         public ActionResult AddIngredientToStock(int quantity, string name)
         {
@@ -49,7 +55,7 @@ namespace FoodAPI.Controllers
 
             return Ok();
         }
-
+        // Here we have a method that removes an ingredient from the stock
         [HttpDelete("RemoveIngredient")]
         public ActionResult RemoveIngredientFromStock(int id)
         {

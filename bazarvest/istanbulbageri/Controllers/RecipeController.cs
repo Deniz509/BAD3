@@ -5,13 +5,17 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 
+
+//Here we are defining the controller as an API controller
 namespace FoodAPI.Controllers
 {
+    // This is the controller for the Recipe controller.
     [Route("api/[controller]")]
     [ApiController]
     [Produces("application/json")]
     public class RecipeController : ControllerBase
     {
+        //Here we have a private and public constructor for the Recipe controller.
         private readonly BakeryDbContext _context;
 
         public RecipeController(BakeryDbContext context)

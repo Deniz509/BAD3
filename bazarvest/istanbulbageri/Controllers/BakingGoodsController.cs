@@ -5,8 +5,12 @@ using System.Linq;
 
 namespace FoodAPI.Controllers
 {
+    // This is the controller for the BakingGoods controller.
     [Route("api/[controller]")]
+    //Here we are defining the controller as an API controller
     [ApiController]
+
+    //Here we are defining the controller as an API controller
     [Produces("application/json")]
     public class BakingGoodsController : ControllerBase
     {
@@ -18,8 +22,9 @@ namespace FoodAPI.Controllers
         }
 
 
-        // 3. Get the list of baked goods in an order
+        // Get the list of baked goods in an order
         [HttpGet("CompanyOrderID")]
+        // This method returns a list of baking goods in an order
         public ActionResult GetBakingGoodsInOrder(int CompanyOrderID)
         {
             var bakingGoods = _context.BakingGoods.Where(bg => bg.CompanyOrdersID == CompanyOrderID).ToList();
