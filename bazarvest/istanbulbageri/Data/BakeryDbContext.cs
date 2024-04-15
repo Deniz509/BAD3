@@ -15,7 +15,7 @@ namespace FoodAPI.Data
         public DbSet<Batch> Batch { get; set; }
         public DbSet<CompanyOrders> CompanyOrders { get; set; }
         public DbSet<Ingredients> Ingredients { get; set; }
-
+        
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
