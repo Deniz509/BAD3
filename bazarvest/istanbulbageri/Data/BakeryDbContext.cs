@@ -33,44 +33,51 @@ namespace FoodAPI.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
+            // Relationship between CompanyOrders and Dispatch
             modelBuilder.Entity<CompanyOrders>()
                 .HasMany(o => o.Dispatch)
                 .WithOne(p => p.CompanyOrders)
                 .HasForeignKey(p => p.CompanyOrdersID)
                 .IsRequired();
 
+            // Relationship between CompanyOrders and BakingGoods
             modelBuilder.Entity<CompanyOrders>()
                 .HasMany(o => o.BakingGoods)
                 .WithOne(p => p.CompanyOrders)
                 .HasForeignKey(p => p.CompanyOrdersID)
                 .IsRequired();
 
+            // Define relationship between BakingGoods and Batch
             modelBuilder.Entity<BakingGoods>()
                 .HasMany(o => o.Batch)
                 .WithOne(o => o.BakingGoods)
                 .HasForeignKey(o => o.BakingGoodsID)
                 .IsRequired();
 
+            // One-to-one relationship between Recipe and BakingGoods
             modelBuilder.Entity<Recipe>()
                 .HasOne(o => o.BakingGoods)
                 .WithOne(o => o.Recipe)
                 .HasForeignKey<BakingGoods>(e => e.RecipeID)
                 .IsRequired();
 
-
+            // Composite key for Ingredients
             modelBuilder.Entity<Ingredients>()
-            .HasKey(rs => new { rs.RecipeID, rs.StockID });
+                .HasKey(rs => new { rs.RecipeID, rs.StockID });
 
+            // Relationship between Ingredients and Recipe
             modelBuilder.Entity<Ingredients>()
                 .HasOne(rs => rs.Recipe)
                 .WithMany(r => r.Ingredients)
                 .HasForeignKey(rs => rs.RecipeID);
 
+            // Relationship between Ingredients and Stock
             modelBuilder.Entity<Ingredients>()
                 .HasOne(rs => rs.Stock)
                 .WithMany(s => s.Ingredients)
                 .HasForeignKey(rs => rs.StockID);
 
+            // Relationship between Allergen and Stock
             modelBuilder.Entity<Allergen>()
                 .HasOne(e => e.Stock)
                 .WithOne(e => e.Allergen)
