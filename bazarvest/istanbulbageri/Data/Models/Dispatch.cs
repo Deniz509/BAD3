@@ -3,16 +3,20 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FoodAPI.Data.Models
 {
+    // Represents a dispatch, containing GPS coordinates and associated with a company order.
     public class Dispatch
-	{
+    {
+        // Unique identifier for the dispatch.
         [Key]
-        public int TrackID{ get; set; }
+        public int TrackID { get; set; }
 
+        // ID of the company orders associated with the dispatch.
         public int CompanyOrdersID { get; set; }
 
+        // Company orders associated with the dispatch.
         public virtual CompanyOrders CompanyOrders { get; set; } = null!;
 
-        //Gps Coords
+        // GPS coordinates.
         public float Latitude { get; set; }
         public float Longitude { get; set; }
     }

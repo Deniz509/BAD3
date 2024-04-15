@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("istanbulbageri")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cbe917017ffc5232a7bc3c445b3474e1753fb95c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e16d18e2cbc2ead1a94ae5c82bf8350195d4dcaf")]
 [assembly: System.Reflection.AssemblyProductAttribute("istanbulbageri")]
 [assembly: System.Reflection.AssemblyTitleAttribute("istanbulbageri")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
