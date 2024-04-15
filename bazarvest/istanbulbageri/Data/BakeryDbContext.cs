@@ -161,7 +161,7 @@ namespace FoodAPI.Data
                  // Initializing data for the Allergen entity.
             modelBuilder.Entity<Allergen>().HasData(
                 new Allergen { AllergenID = 1, Name = "Leavening agent", StockID = 1 },
-                new Allergen { AllergenID = 2, Name = "Alcohol", StockID = 2 },
+                new Allergen { AllergenID = 2, Name = "Alcohol Free", StockID = 2 },
                 new Allergen { AllergenID = 3, Name = "Gluten", StockID = 3 },
                 new Allergen { AllergenID = 4, Name = "Lactose", StockID = 4 },
                 new Allergen { AllergenID = 5, Name = "Gluten", StockID = 5 },
