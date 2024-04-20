@@ -1,9 +1,9 @@
-using FoodAPI.Data.Models;
+using Bakery.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 using System.Reflection.Metadata;
 
-namespace FoodAPI.Data
+namespace Bakery.Data
 {
     public class BakeryDbContext : DbContext
     {

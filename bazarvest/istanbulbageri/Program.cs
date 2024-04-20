@@ -1,4 +1,4 @@
-using FoodAPI.Data;
+using Bakery.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

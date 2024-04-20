@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
-using FoodAPI.Data;
-using FoodAPI.Data.Models;
+using Bakery.Data;
+using Bakery.Models;
 using System.Linq;
 
-namespace FoodAPI.Controllers
+namespace Bakery.Controllers
 {
     // This is the controller for the BakingGoods controller.
     [Route("api/[controller]")]

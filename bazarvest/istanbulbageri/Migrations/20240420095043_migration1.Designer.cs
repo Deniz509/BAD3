@@ -4,6 +4,7 @@ using Bakery.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace istanbulbageri.Migrations
 {
     [DbContext(typeof(BakeryDbContext))]
-    partial class BakeryDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240420095043_migration1")]
+    partial class migration1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -198,32 +201,32 @@ namespace istanbulbageri.Migrations
                             BatchID = 1,
                             BakingGoodsID = 1,
                             Delay = 40f,
-                            FinishTime = new DateTime(2024, 4, 20, 12, 31, 1, 389, DateTimeKind.Local).AddTicks(295),
-                            StartTime = new DateTime(2024, 4, 20, 11, 51, 1, 389, DateTimeKind.Local).AddTicks(239)
+                            FinishTime = new DateTime(2024, 4, 20, 12, 30, 42, 830, DateTimeKind.Local).AddTicks(1956),
+                            StartTime = new DateTime(2024, 4, 20, 11, 50, 42, 830, DateTimeKind.Local).AddTicks(1901)
                         },
                         new
                         {
                             BatchID = 2,
                             BakingGoodsID = 2,
                             Delay = 0f,
-                            FinishTime = new DateTime(2024, 4, 20, 13, 1, 1, 389, DateTimeKind.Local).AddTicks(301),
-                            StartTime = new DateTime(2024, 4, 20, 12, 41, 1, 389, DateTimeKind.Local).AddTicks(300)
+                            FinishTime = new DateTime(2024, 4, 20, 13, 0, 42, 830, DateTimeKind.Local).AddTicks(1961),
+                            StartTime = new DateTime(2024, 4, 20, 12, 40, 42, 830, DateTimeKind.Local).AddTicks(1959)
                         },
                         new
                         {
                             BatchID = 3,
                             BakingGoodsID = 3,
                             Delay = 20f,
-                            FinishTime = new DateTime(2024, 4, 20, 13, 31, 1, 389, DateTimeKind.Local).AddTicks(304),
-                            StartTime = new DateTime(2024, 4, 20, 13, 1, 1, 389, DateTimeKind.Local).AddTicks(303)
+                            FinishTime = new DateTime(2024, 4, 20, 13, 30, 42, 830, DateTimeKind.Local).AddTicks(1964),
+                            StartTime = new DateTime(2024, 4, 20, 13, 0, 42, 830, DateTimeKind.Local).AddTicks(1963)
                         },
                         new
                         {
                             BatchID = 4,
                             BakingGoodsID = 4,
                             Delay = 56f,
-                            FinishTime = new DateTime(2024, 4, 20, 14, 21, 1, 389, DateTimeKind.Local).AddTicks(307),
-                            StartTime = new DateTime(2024, 4, 20, 14, 1, 1, 389, DateTimeKind.Local).AddTicks(306)
+                            FinishTime = new DateTime(2024, 4, 20, 14, 20, 42, 830, DateTimeKind.Local).AddTicks(1968),
+                            StartTime = new DateTime(2024, 4, 20, 14, 0, 42, 830, DateTimeKind.Local).AddTicks(1967)
                         });
                 });
 

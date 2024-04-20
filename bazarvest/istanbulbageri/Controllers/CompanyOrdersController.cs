@@ -1,10 +1,10 @@
- using Microsoft.AspNetCore.Mvc;
-using FoodAPI.Data;
-using FoodAPI.Data.Models;
+using Microsoft.AspNetCore.Mvc;
+using Bakery.Data;
+using Bakery.Models;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 //Here we are defining the controller as an API controller
-namespace FoodAPI.Controllers
+namespace Bakery.Controllers
 {
     //Here we are defining the controller as an API controller
     [Route("api/[controller]")]

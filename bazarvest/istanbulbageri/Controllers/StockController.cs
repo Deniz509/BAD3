@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using FoodAPI.Data;
-using FoodAPI.Data.Models;
+using Bakery.Data;
+using Bakery.Models;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 
 //Here we are defining the controller as an API controller
-namespace FoodAPI.Controllers
+namespace Bakery.Controllers
 {
     // This is the controller for the Stock controller.
     [Route("api/[controller]")]
