@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mikai\\Desktop\\BAD3\\bazarvest\\istanbulbageri\\istanbulbageri.csproj": {}
+    "C:\\Users\\nahimi\\OneDrive\\Skrivebord\\BAD3\\bazarvest\\istanbulbageri\\istanbulbageri.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mikai\\Desktop\\BAD3\\bazarvest\\istanbulbageri\\istanbulbageri.csproj": {
+    "C:\\Users\\nahimi\\OneDrive\\Skrivebord\\BAD3\\bazarvest\\istanbulbageri\\istanbulbageri.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mikai\\Desktop\\BAD3\\bazarvest\\istanbulbageri\\istanbulbageri.csproj",
+        "projectUniqueName": "C:\\Users\\nahimi\\OneDrive\\Skrivebord\\BAD3\\bazarvest\\istanbulbageri\\istanbulbageri.csproj",
         "projectName": "istanbulbageri",
-        "projectPath": "C:\\Users\\mikai\\Desktop\\BAD3\\bazarvest\\istanbulbageri\\istanbulbageri.csproj",
-        "packagesPath": "C:\\Users\\mikai\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mikai\\Desktop\\BAD3\\bazarvest\\istanbulbageri\\obj\\",
+        "projectPath": "C:\\Users\\nahimi\\OneDrive\\Skrivebord\\BAD3\\bazarvest\\istanbulbageri\\istanbulbageri.csproj",
+        "packagesPath": "C:\\Users\\nahimi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nahimi\\OneDrive\\Skrivebord\\BAD3\\bazarvest\\istanbulbageri\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\mikai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nahimi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -39,11 +39,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -106,7 +101,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
